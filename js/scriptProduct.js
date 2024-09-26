@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 container.innerHTML = `
                     <div class="gallery">
                         <div class="gallery__main">
-                            <img id="main-image" src="../${producto.image}" alt="${producto.name}">
+                            <img id="main-image" src="${producto.image}" alt="${producto.name}">
                         </div>
                         <div class="gallery__extras">
                             <div id="prev" class="carrousel-button" style="display: none;">
