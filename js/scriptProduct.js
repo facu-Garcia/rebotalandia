@@ -12,14 +12,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 container.innerHTML = `
                     <div class="gallery">
                         <div class="gallery__main">
-                            <img id="main-image" src="${producto.image}" alt="${producto.name}">
+                            <img id="main-image" src="../${producto.image}" alt="${producto.name}">
                         </div>
                         <div class="gallery__extras">
                             <div id="prev" class="carrousel-button" style="display: none;">
                                 <span class="material-symbols-rounded">chevron_left</span>
                             </div>
                             ${Object.keys(producto.gallery).map((key, index) => `
-                                <img src="../${producto.gallery[key]}" alt="${producto.name} ${key}" class="gallery__thumbnail" data-index="${index}">
+                                <img src="${producto.gallery[key]}" alt="${producto.name} ${key}" class="gallery__thumbnail" data-index="${index}">
                             `).join('')}
                             <div id="next" class="carrousel-button" style="display: none;">
                                 <span class="material-symbols-rounded">chevron_right</span>
