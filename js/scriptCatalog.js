@@ -24,15 +24,17 @@ function filtrarCatalogo() {
 
     const filtrados = window.catalogData.filter(item => {
         const nombreIncluye = item.name.toLowerCase().includes(nombreFiltro);
+        const precioNumerico = parseFloat(item.price.replace(',', ''));
+
         let precioIncluye = false;
 
         if (precioFiltro === 'todos') {
             precioIncluye = true;
-        } else if (precioFiltro === 'menor1000' && item.price < 1000) {
+        } else if (precioFiltro === 'menor1000' && precioNumerico < 1000) {
             precioIncluye = true;
-        } else if (precioFiltro === '1000-2000' && item.price >= 1000 && item.price <= 2000) {
+        } else if (precioFiltro === '1000-2000' && precioNumerico >= 1000 && precioNumerico <= 2000) {
             precioIncluye = true;
-        } else if (precioFiltro === 'mayor2000' && item.price > 2000) {
+        } else if (precioFiltro === 'mayor2000' && precioNumerico > 2000) {
             precioIncluye = true;
         }
 
