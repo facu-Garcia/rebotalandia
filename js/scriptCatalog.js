@@ -60,7 +60,7 @@ function mostrarCatalogo(data) {
                 <a class="item__content" href="catalogo/${item.link}">
                     <div class="image" style="background: url(${item.image}) no-repeat center center / contain"></div>
                     <h2>${item.name}</h2>
-                    <p class="price">Rentalo por <br> ${item.price}</p>
+                    <p class="price">Rentalo por <br> <strong>$${item.price}</strong></p>
                 </a>
                 <div class="info__link">
                     <a href="si" class="info__data">

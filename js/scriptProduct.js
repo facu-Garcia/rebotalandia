@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div class="title">
                             <h1>${producto.name}</h1>
                         </div>
-                        <p class="price">Rentalo por <br> ${producto.price}</p>
+                        <p class="price">Rentalo por <br> <strong>$${producto.price}</strong></p>
                         <a href="si" class="info__data">
                             <i class="fab fa-whatsapp fa-2xl"></i>
                             <p>Pidelo ya!</p>
