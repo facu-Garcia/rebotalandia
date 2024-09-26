@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/stylesIndex.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <div class="device"></div>
+
+    <header>
+        <nav role="navigation">
+            <div class="nav__content">
+                <div class="nav__logo">
+                    <a href="/">
+                        <img src="images/Logo.svg" alt="Logo de la empresa" class="logo">
+                    </a>
+                </div>
+                <div class="nav__menu button">
+                    <span class="material-symbols-rounded" id="menu">
+                        menu
+                    </span>
+                </div>
+            </div>
+            <ul class="nav__links">
+                <li>
+                    <a class="button button--ballon button--home" href="/">
+                        <div class="button__hover"></div>
+                        <div class="button__highlight"></div>
+                        <div class="button__content">
+                            <span class="material-symbols-rounded button__icon">
+                                home
+                            </span>
+                            <span class="button__text">Inicio</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="button button--ballon button--catalog" href="pages/catalogo.html">
+                        <div class="button__hover"></div>
+                        <div class="button__highlight"></div>
+                        <div class="button__content">
+                            <span class="material-symbols-rounded button__icon">
+                                grid_view
+                            </span>
+                            <span class="button__text">Catálogo</span>
+                        </div>
+
+                    </a>
+                </li>
+                <li>
+                    <a class="button button--ballon button--about" href="pages/nosotros.html">
+                        <div class="button__hover"></div>
+                        <div class="button__highlight"></div>
+                        <div class="button__content">
+                            <span class="material-symbols-rounded button__icon">
+                                groups
+                            </span>
+                            <span class="button__text">Nosotros</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="button button--ballon button--contact" href="pages/contactanos.html">
+                        <div class="button__hover"></div>
+                        <div class="button__highlight"></div>
+                        <div class="button__content">
+                            <span class="material-symbols-rounded button__icon">
+                                call
+                            </span>
+                            <span class="button__text">Contácto</span>
+                        </div>
+                    </a>
+                </li>
+                <div class="waves waves--movil"></div>
+            </ul>
+        </nav>
+        <div class="waves waves--desktop"></div>
+    </header>
+
+    <main>
+        <section class="container carousel" id="carousel-container">
+            <div class="carousel__content">
+                <div class="carousel__item rainbow-slide active">
+                    <div class="carousel__item__content">
+                        <img src="images/inflables/rainbow-slide/rainbow-slide_000.webp" alt="">
+                        <div class="content__support">
+                            <div class="content__confeti"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel__item castillo-gusano">
+                    <div class="carousel__item__content">
+                        <img src="images/inflables/castillo-gusano-aventura/castillo-gusano-aventura_000.webp" alt="">
+                        <div class="content__support">
+                            <div class="content__confeti"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel__item diversion-arcoiris">
+                    <div class="carousel__item__content">
+                        <img src="images/inflables/diversion-arcoiris/diversion-arcoiris_00.webp" alt="">
+                        <div class="content__support">
+                            <div class="content__confeti"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="controls">
+                    <button id="prev" class="button button--control">
+                        <div class="button__content">
+                            <span class="material-symbols-rounded button__icon">
+                                chevron_left
+                            </span>
+                        </div>
+                        <div class="button__hover" id="button__hover--left"></div>
+                        <div class="button__highlight"></div>
+                    </button>
+                    <button id="next" class="button button--control">
+                        <div class="button__content">
+                            <span class="material-symbols-rounded button__icon">
+                                chevron_right
+                            </span>
+                        </div>
+                        <div class="button__hover" id="button__hover--right"></div>
+                        <div class="button__highlight"></div>
+                    </button>
+                </div>
+                <div class="carousel__text">
+                    <div class="text__names">
+                        <span>rainbow <br>slide</span>
+                        <span>castillo gusano <br> aventura</span>
+                        <span>diversion <br> arcoiris</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section__attachment section__attachment__title">
+            <h1>BIENVENIDOS A REBOTALANDIA</h1>
+        </section>
+
+        <section class="container container__home">
+            <p class="home__title">La diversión comienza aquí</p>
+            <p>En Rebotalandia, una empresa orgullosamente mexicana, estamos dedicados a llevar alegría y emoción a tus
+                eventos
+                con nuestros increíbles juegos inflables. Ya sea que estés organizando: </p>
+            <ul>
+                <li>
+                    <div class="image"></div>
+                    <h3>Fiesta <br>Infantil</h3>
+                </li>
+                <li>
+                    <div class="image"></div>
+                    <h3>Evento <br> Escolar</span>
+                </li>
+                <li>
+                    <div class="image"></div>
+                    <h3>Cualquier <br> Celebración</h3>
+                </li>
+            </ul>
+            <p>Tenemos el entretenimiento perfecto para todas las edades!.</p>
+        </section>
+
+        <section class="section__attachment section__attachment__catalog">
+            <p>REVISA NUESTRO CATALOGO</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer__content">
+            <div class="footer__logo">
+                <a href="/">
+                    <img src="images/Logo.svg" alt="Logo de la empresa" class="logo">
+                </a>
+                <p>Tu diversión, es nuestra pasión</p>
+            </div>
+            <div class="footer__links footer__content--s">
+                <h5>Enlaces</h5>
+                <ul>
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="/catalogo">Catálogo</a></li>
+                    <li><a href="/nosotros">Nosotros</a></li>
+                    <li><a href="/contactanos">Contáctanos</a></li>
+                </ul>
+            </div>
+            <div class="footer__social footer__content--s">
+                <h5>Redes Sociales</h5>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Whatsapp</a></li>
+                </ul>
+            </div>
+            <div class="footer__legal footer__content--s">
+                <h5>Legal</h5>
+                <ul>
+                    <li><a href="/aviso-legal">Aviso Legal</a></li>
+                    <li><a href="/privacidad">Política de Privacidad</a></li>
+                    <li><a href="/cookies">Política de Cookies</a></li>
+                    <li><a href="/reglamento">Reglamento para el Uso de Inflables </a></li>
+                    <li><a href="/normas">Normas de Seguridad para el Uso de Equipos Inflables</a></li>
+                    <li><a href="/creditos">Créditos</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            <p>&copy; 2024 REBOTALANDIA. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+<script src="/js/script.js"></script>
+<script src="/js/scriptIndex.js"></script>
+
+</html>
