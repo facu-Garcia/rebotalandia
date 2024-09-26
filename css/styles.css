@@ -502,7 +502,7 @@ nav .nav__links li {
     top: 99%;
     overflow: hidden;
     transform: rotate(180deg);
-    background-image: url(/images/support/wave.webp);
+    background-image: url(images/support/wave.webp);
     background-repeat: repeat-x;
     background-size: cover;
     background-position: center;
