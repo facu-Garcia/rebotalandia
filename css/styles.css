@@ -303,6 +303,9 @@ body {
     color: var(--neutral-900);
     font-family: var(--font-family-primary);
     background-color: var(--base-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 
@@ -592,6 +595,7 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    width: 100%;
 }
 
 .device {
@@ -736,5 +740,9 @@ main {
 
     nav {
         max-width: 1400px;
+    }
+
+    .waves { 
+    background-size: contain;
     }
 }
