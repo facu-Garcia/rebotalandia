@@ -401,18 +401,6 @@ h2 {
     gap: var(--spacing-m);
 }
 
-.filtros select,
-.filtros label,
-.filtros input {
-    padding: var(--padding-xs);
-    width: 100%;
-}
-
-.filtros select,
-.filtros input {
-    border: 1px solid var(--base-black);
-}
-
 .filtro__collection {
     display: flex;
     flex-wrap: wrap;

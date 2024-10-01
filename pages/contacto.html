@@ -88,74 +88,65 @@
 
     <main>
         <section class="section__title">
-            <h1>Nosotros</h1>
-            <p>¡Descubre por qué somos tu mejor opción para diversión familiar y eventos!</p>
+            <h1>Contáctanos</h1>
+            <p><strong>Tu diversión es nuestra misión.</strong> Contáctanos y planifiquemos juntos el mejor evento.</p>
         </section>
-
-        <section class="section__about">
-            <h2>¿Por qué elegirnos?</h2>
-
-            <div class="about__item">
-                <div class="about__text">
-                    <p><strong>Innovación y Diversión:</strong></p>
-                    <p>Contamos con juegos inflables, desde castillos inflables y toboganes gigantes hasta obstáculos,
-                        todos diseñados para la máxima diversión.</p>
+        <section class="section__contact container">
+            <div class="contact__mail">
+                <div class="mail__title">
+                    <h2>Envíanos un Email</h2>
+                    <div class="line"></div>
+                    <p>Estamos aquí para ayudarte. Completa el formulario y nos pondremos en contacto contigo.</p>
                 </div>
-                <div class="about__image">
-                    <!-- Espacio para una imagen aquí -->
-                    <img src="../images/support/aboutUs/back-view-man-holding-mexican-flag.jpg"
-                        alt="Innovación y Diversión en juegos inflables">
-                </div>
-            </div>
-
-            <div class="about__item">
-                <div class="about__text">
-                    <p><strong>Calidad y Seguridad:</strong></p>
-                    <p>Nuestros inflables están fabricados con los mejores materiales del mercado, asegurando
-                        durabilidad y seguridad. Realizamos inspecciones rigurosas para que cada juego esté en perfectas
-                        condiciones.</p>
-                </div>
-                <div class="about__image">
-                    <!-- Espacio para una imagen aquí -->
-                    <img src="../images/support/aboutUs/back-view-man-holding-mexican-flag.jpg"
-                        alt="Calidad y seguridad de nuestros inflables">
+                <div class="mail__content">
+                    <form action="send_email.php" method="POST">
+                        <div class="form__group">
+                            <label for="name">Nombre:</label>
+                            <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="form__group">
+                            <label for="email">Correo electrónico:</label>
+                            <input type="email" id="email" name="email" placeholder="Tu correo" required>
+                        </div>
+                        <div class="form__group">
+                            <label for="message">Mensaje:</label>
+                            <textarea id="message" name="message" placeholder="Tu mensaje" rows="5" required></textarea>
+                        </div>
+                        <div class="form__group">
+                            <button type="submit" class="button button--submit">Enviar</button>
+                        </div>
+                    </form>
                 </div>
             </div>
 
-            <div class="about__item">
-                <div class="about__text">
-                    <p><strong>Servicio Personalizado:</strong></p>
-                    <p>Como una empresa joven, entendemos la importancia de brindar un servicio excepcional. Nos
-                        encargamos de la instalación y desinstalación de los juegos, para que tú solo tengas que
-                        preocuparte por disfrutar.</p>
+            <div class="contact__social">
+                <div class="social__title">
+                    <h2>Síguenos</h2>
+                    <div class="line"></div>
+                    <p>Conéctate con nosotros a través de nuestras redes sociales.</p>
                 </div>
-                <div class="about__image">
-                    <!-- Espacio para una imagen aquí -->
-                    <img src="../images/support/aboutUs/back-view-man-holding-mexican-flag.jpg"
-                        alt="Servicio personalizado en instalación de inflables">
-                </div>
-            </div>
-
-            <div class="about__item">
-                <div class="about__text">
-                    <p><strong>Espíritu Mexicano:</strong></p>
-                    <p> Nos enorgullece ser una empresa mexicana que valora y celebra nuestra cultura.</p>
-                </div>
-                <div class="about__image">
-                    <!-- Espacio para una imagen aquí -->
-                    <img src="../images/support/aboutUs/back-view-man-holding-mexican-flag.jpg"
-                        alt="Empresa mexicana orgullosa de su cultura">
-                </div>
-            </div>
-
-            <div class="about__item">
-                <div class="about__text">
-                    <p>Explora nuestra página para descubrir los juegos inflables que ofrecemos y no dudes en
-                        contactarnos para más información o para reservar tu próximo evento. En Rebotalandia, ¡tu
-                        diversión es nuestra pasión!</p>
+                <div class="social__content">
+                    <div class="social__content__item">
+                        <a href="https://www.facebook.com/share/eFAUNT3oCYiMLdkH/?mibextid=qi2Omg" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </div>
+                    <div class="social__content__item">
+                        <a href="https://www.instagram.com/inflablesrebotalandia/"  target="_blank" rel="noopener noreferrer">
+                            <div class="icon-gradient">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="social__content__item">
+                        <a href="" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
+
     </main>
 
 
