@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <h1>${producto.name}</h1>
                         </div>
                         <p class="price">Rentalo por <br> <strong>$${producto.price}</strong></p>
-                        <a href="si" class="info__data">
+                        <a class="info__data" href="https://wa.me/525581033464?text=${encodeURIComponent(`Hola, estoy interesado(a) en el inflable ${producto.name}. ¿Podrías darme más detalles sobre la disponibilidad y el proceso de renta? Gracias.`)}" target="_blank">
                             <i class="fab fa-whatsapp fa-2xl"></i>
                             <p>Pidelo ya!</p>
                         </a>
@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 </a>
 
                                 <div class="info__link">
-                                    <a href="si" class="info__data">
+                                    <a class="info__data" href="https://wa.me/525581033464?text=${encodeURIComponent(`Hola, estoy interesado(a) en el inflable ${recomendado.name}. ¿Podrías darme más detalles sobre la disponibilidad y el proceso de renta? Gracias.`)}" target="_blank">                                     
                                         <i class="fab fa-whatsapp fa-lg"></i>
                                         <p>Pidelo ya!</p>
                                     </a>

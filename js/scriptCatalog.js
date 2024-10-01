@@ -65,7 +65,7 @@ function mostrarCatalogo(data) {
                     <p class="price">Rentalo por <br> <strong>$${item.price}</strong></p>
                 </a>
                 <div class="info__link">
-                    <a class="info__data" href="https://wa.me/525581033464?text=Hola%20me%20interesa%20tu%20producto" target="_blank">
+                    <a class="info__data" href="https://wa.me/525581033464?text=${encodeURIComponent(`Hola, estoy interesado(a) en el inflable ${item.name}. ¿Podrías darme más detalles sobre la disponibilidad y el proceso de renta? Gracias.`)}" target="_blank">
                         <i class="fab fa-whatsapp fa-lg"></i>
                         <p>Pidelo ya!</p>
                     </a>
