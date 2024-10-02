@@ -91,59 +91,61 @@
             <h1>Contáctanos</h1>
             <p><strong>Tu diversión es nuestra misión.</strong> Contáctanos y planifiquemos juntos el mejor evento.</p>
         </section>
+
         <section class="section__contact container">
-            <div class="contact__mail">
-                <div class="mail__title">
-                    <h2>Envíanos un Email</h2>
+            <div class="contact__info">
+                <div class="info__title">
+                    <h2>PONTE EN CONTACTO CON <br> <span>NOSOTROS</span></h2>
                     <div class="line"></div>
-                    <p>Estamos aquí para ayudarte. Completa el formulario y nos pondremos en contacto contigo.</p>
+                    <p>Estamos aquí para ayudarte. <br> Completa el formulario y nos pondremos en contacto contigo.
+                    </p>
                 </div>
-                <div class="mail__content">
-                    <form action="send_email.php" method="POST">
-                        <div class="form__group">
-                            <label for="name">Nombre:</label>
-                            <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+                <div class="info__social">
+                    <div class="social__title">
+                        <h2>Síguenos</h2>
+                        <div class="line"></div>
+                        <p>Conéctate con nosotros a través de nuestras redes sociales.</p>
+                    </div>
+                    <div class="social__content">
+                        <div class="social__content__item">
+                            <a href="https://www.facebook.com/share/eFAUNT3oCYiMLdkH/?mibextid=qi2Omg" target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="fab fa-facebook"></i>
+                            </a>
                         </div>
-                        <div class="form__group">
-                            <label for="email">Correo electrónico:</label>
-                            <input type="email" id="email" name="email" placeholder="Tu correo" required>
+                        <div class="social__content__item">
+                            <a href="https://www.instagram.com/inflablesrebotalandia/" target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="fab fa-instagram"></i>
+                            </a>
                         </div>
-                        <div class="form__group">
-                            <label for="message">Mensaje:</label>
-                            <textarea id="message" name="message" placeholder="Tu mensaje" rows="5" required></textarea>
+                        <div class="social__content__item">
+                            <a href="" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
                         </div>
-                        <div class="form__group">
-                            <button type="submit" class="button button--submit">Enviar</button>
-                        </div>
-                    </form>
+                    </div>
                 </div>
             </div>
 
-            <div class="contact__social">
-                <div class="social__title">
-                    <h2>Síguenos</h2>
-                    <div class="line"></div>
-                    <p>Conéctate con nosotros a través de nuestras redes sociales.</p>
-                </div>
-                <div class="social__content">
-                    <div class="social__content__item">
-                        <a href="https://www.facebook.com/share/eFAUNT3oCYiMLdkH/?mibextid=qi2Omg" target="_blank" rel="noopener noreferrer">
-                            <i class="fab fa-facebook"></i>
-                        </a>
+            <div class="contact__mail">
+                <form action="send_email.php" method="POST">
+                    <div class="form__group">
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" name="name" placeholder="Tu nombre" required>
                     </div>
-                    <div class="social__content__item">
-                        <a href="https://www.instagram.com/inflablesrebotalandia/"  target="_blank" rel="noopener noreferrer">
-                            <div class="icon-gradient">
-                                <i class="fab fa-instagram"></i>
-                            </div>
-                        </a>
+                    <div class="form__group">
+                        <label for="email">Correo electrónico:</label>
+                        <input type="email" id="email" name="email" placeholder="Tu correo" required>
                     </div>
-                    <div class="social__content__item">
-                        <a href="" target="_blank" rel="noopener noreferrer">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
+                    <div class="form__group">
+                        <label for="message">Mensaje:</label>
+                        <textarea id="message" name="message" placeholder="Tu mensaje" rows="5" required></textarea>
                     </div>
-                </div>
+                    <div class="form__group">
+                        <button type="submit" class="button button--submit">Enviar</button>
+                    </div>
+                </form>
             </div>
         </section>
 

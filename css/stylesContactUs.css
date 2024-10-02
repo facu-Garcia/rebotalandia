@@ -1,232 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-
-:root {
-
-    /* Fonts */
-    --font-family-primary: 'Shantell Sans', sans-serif;
-    --font-family-secondary: 'Caveat Brush', cursive;
-
-    --font-size-xxs: clamp(0.625rem, 1vw, 0.75rem);
-    /* (10px - 12px) */
-    --font-size-xs: clamp(0.75rem, 1.25vw, 0.875rem);
-    /* (12px - 14px) */
-    --font-size-sm: clamp(0.875rem, 1.75vw, 1.125rem);
-    /* (14px - 18px) */
-    --font-size-md: clamp(1rem, 1vw, 1rem);
-    /* Fijo en 16px (1rem) */
-    --font-size-lg: clamp(1.125rem, 2.25vw, 1.5rem);
-    /* (18px - 24px) */
-    --font-size-xl: clamp(1.25rem, 2.5vw, 2rem);
-    /* Extra Large */
-    --font-size-xxl: clamp(1.5rem, 3vw, 2.5rem);
-    /* (24px - 40px) */
-
-    /* Jumbo */
-    --font-size-jumbo: clamp(1.75rem, 3.5vw, 3rem);
-    /* (28px - 48px) */
-
-    /* Mega Large */
-    --font-size-mega: clamp(2rem, 1.429rem + 2.857vw, 4rem);
-    /* (32px - 56px) */
-    --font-size-giga: clamp(2.5rem, 1.786rem + 3.571vw, 5rem);
-
-
-
-
-    /* Heading Sizes */
-    --font-size-h1: clamp(2rem, 4vw, 3rem);
-    /* H1 - Principal encabezado */
-    --font-size-h2: clamp(1.75rem, 3.5vw, 2.5rem);
-    /* H2 - Segundo nivel */
-    --font-size-h3: clamp(1.5rem, 3vw, 2rem);
-    /* H3 - Tercer nivel */
-    --font-size-h4: clamp(1.25rem, 2.5vw, 1.75rem);
-    /* H4 - Cuarto nivel */
-    --font-size-h5: clamp(1rem, 2vw, 1.2rem);
-    /* H5 - Quinto nivel */
-    --font-size-h6: clamp(0.875rem, 1.5vw, 1.25rem);
-    /* H6 - Sexto nivel */
-
-    /* Paragraph Text */
-    --font-size-p: clamp(1rem, 2vw, 1.125rem);
-    /* Texto de párrafo */
-
-    /* Special Cases */
-    --font-size-caption: clamp(0.75rem, 1vw, 0.875rem);
-    /* Caption (12px - 14px) */
-    --font-size-button: clamp(0.875rem, 1.5vw, 1rem);
-    /* Botones (14px - 16px) */
-
-    /* Base Colors */
-    --base-white: #fafafa;
-    --base-black: #0a0a0b;
-    --success: #308c3e;
-    --warning: #d97925;
-    --error: #e4626f;
-
-    /* Primary Colors */
-    --primary: #1da8e4;
-    --primary-100: #d9f1fb;
-    --primary-200: #b4e2f6;
-    --primary-300: #8ed4f2;
-    --primary-400: #68c5ed;
-    --primary-500: #43b6e9;
-    --primary-600: #1893c8;
-    --primary-700: #147daa;
-    --primary-800: #11688d;
-    --primary-900: #0d526f;
-    --primary-1000: #0a3c52;
-
-    /* Secondary Colors */
-    --secondary: #bf0f82;
-    --secondary-100: #fcd7ef;
-    --secondary-200: #f9aedf;
-    --secondary-300: #f686cf;
-    --secondary-400: #f25ebf;
-    --secondary-500: #ef36af;
-    --secondary-600: #e7129d;
-    --secondary-700: #a30d6f;
-    --secondary-800: #870b5c;
-    --secondary-900: #6b0849;
-    --secondary-1000: #4f0636;
-
-    /* Neutrals Colors */
-    --neutral-100: #e3e3e3;
-    --neutral-200: #cccbcb;
-    --neutral-300: #b5b3b3;
-    --neutral-400: #9f9c9c;
-    --neutral-500: #898384;
-    --neutral-600: #726c6c;
-    --neutral-700: #5a5555;
-    --neutral-800: #433e3f;
-    --neutral-900: #2b2829;
-    --neutral-1000: #151314;
-
-    /* Success Colors */
-    --success-100: #afe4b7;
-    --success-200: #5fc86f;
-    --success-300: #22642c;
-
-    /* Warning Colors */
-    --warning-100: #f3d2b6;
-    --warning-200: #e6a66d;
-    --warning-300: #98551a;
-
-    /* Error Colors */
-    --error-100: #e4626f;
-    --error-200: #c03744;
-    --error-300: #8c1823;
-
-    /* Green Colors */
-    --green: #308c3e;
-    --green-100: #e1f5e4;
-    --green-200: #c3eac9;
-    --green-300: #a5e0ae;
-    --green-400: #87d693;
-    --green-500: #69cc78;
-    --green-600: #4bc15d;
-    --green-700: #3aaa4b;
-    --green-800: #287433;
-    --green-900: #1f5c29;
-    --green-1000: #17431e;
-
-    /* Yellow Colors */
-    --yellow: #ffc81a;
-    --yellow-100: #fff2cc;
-    --yellow-200: #ffe699;
-    --yellow-300: #ffdb66;
-    --yellow-400: #ffd033;
-    --yellow-500: #ffc81a;
-    --yellow-600: #e6b117;
-    --yellow-700: #cc9a14;
-    --yellow-800: #b38410;
-    --yellow-900: #996d0d;
-    --yellow-1000: #7f570a;
-
-    /* Orange Colors */
-    --orange: #d97925;
-    --orange-100: #faece0;
-    --orange-200: #f4d9c1;
-    --orange-300: #efc6a1;
-    --orange-400: #eab282;
-    --orange-500: #e49f63;
-    --orange-600: #df8c44;
-    --orange-700: #b8671f;
-    --orange-800: #98551a;
-    --orange-900: #774314;
-    --orange-1000: #57300f;
-
-    --purple: #6a367d;
-    --purple-100: #f0e1f4;
-    --purple-200: #dabde4;
-    --purple-300: #c398d4;
-    --purple-400: #ad74c4;
-    --purple-500: #9650b4;
-    --purple-600: #7f3da1;
-    --purple-700: #6a367d;
-    --purple-800: #552b66;
-    --purple-900: #3f204f;
-    --purple-1000: #2a1538;
-
-    /* Spaging */
-    --spacing-base: 16px;
-    --spacing-xxs: 2px;
-    --spacing-xs: 4px;
-    --spacing-s: 6px;
-    --spacing-sm: 10px;
-    --spacing-m: 14px;
-    --spacing-ml: 20px;
-    --spacing-l: 28px;
-    --spacing-xl: 40px;
-
-    /* Radius */
-    --radius-sharp: 0px;
-    --radius-xxs: 2px;
-    --radius-xs: 2px;
-    --radius-s: 4px;
-    --radius-sm: 6px;
-    --radius-m: 10px;
-    --radius-ml: 16px;
-    --radius-lg: 24px;
-    --radius-xl: 36px;
-    --radius-round: 999px;
-    --radius-small-perc: 5%;
-    --radius-medium-perc: 10%;
-    --radius-full-round-perc: 50%;
-
-    /* Padding */
-    --padding-xxs: 4px;
-    --padding-xs: 8px;
-    --padding-sm: 16px;
-    --padding-md: 24px;
-    --padding-lg: 32px;
-    --padding-xl: 40px;
-    --padding-xxl: 48px;
-
-    /* Shadows */
-    /* Sombra sutil para elementos */
-    --shadow-light: 0 2px 4px rgba(0, 0, 0, 0.1);
-
-    /* Sombra más pronunciada para elementos destacados */
-    --shadow-medium: 0 4px 8px rgba(0, 0, 0, 0.2);
-
-    /* Sombra fuerte para destacar elementos principales */
-    --shadow-heavy: 0 6px 12px rgba(0, 0, 0, 0.3);
-
-    /* Sombra para botones con efecto de profundidad */
-    --shadow-button: 0 4px 6px rgba(0, 0, 0, 0.2);
-
-    /* Sombra para tarjetas con efecto de flotación */
-    --shadow-card: 0 8px 16px rgba(0, 0, 0, 0.25);
-
-    /* Sombra para texto */
-    --shadow-text: 0 1px 3px rgba(0, 0, 0, 0.3);
-
-    /* Sombra difusa para fondos */
-    --shadow-background: 0 0 10px rgba(0, 0, 0, 0.15);
-}
-
 p {
     font-size: var(--font-size-p);
 }
@@ -262,93 +33,158 @@ h1 {
 }
 
 .section__contact {
-    padding: var(--padding-lg) var(--padding-md);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.contact__mail {
+    padding: var(--padding-xxl) var(--padding-md);
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
+    align-items: center;
+    gap: var(--spacing-xl);
 }
 
-.mail__title,
-.mail__content {
-    width: 100%;
-    max-width: 600px;
+form {
+    padding: var(--padding-xl) var(--padding-md);
+    border-radius: var(--radius-m);
+    background-color: var(--orange);
+    color: var(--base-white);
 }
 
-.social__title {
-    text-align: center;
-}
-
-.mail__title p,
-.social__title p {
+form button.button {
+    background-color: var(--orange-500);
+    margin-top: var(--spacing-m);
     font-size: var(--font-size-lg);
 }
 
-.line {
-    width: 80%;
-    border: 1px solid var(--base-black);
-    margin: var(--spacing-m) 0;
+input,
+textarea {
+    padding: 1rem;
+    color: var(--base-black);
 }
 
-.contact__social .line {
-    margin: var(--spacing-m) auto;
+h2 {
+    font-size: var(--font-size-jumbo);
 }
 
-.mail__content form {
+h2 span {
+    font-size: var(--font-size-mega);
+}
+
+.contact__info,
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-m);
+    max-width: 500px;
+    width: 100%;
+}
+
+form {
+    max-width: 500px;
+}
+
+.form__group {
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: var(--spacing-m);
 }
 
-.form__group {
+label,
+input,
+textarea {
+    width: 100%;
+}
+
+.info__title,
+.social__title {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.contact__info p {
+    padding: var(--padding-md) 0;
+}
+
+.line {
+    width: 80%;
+    border: 1px solid var(--orange-700);
+    margin: var(--spacing-m) 0;
 }
 
 .social__content {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: var(--spacing-xl);
 }
 
 .social__content i {
     font-size: var(--font-size-mega);
 }
 
+.social__content__item {
+    background-color: var(--base-white);
+    border-radius: var(--radius-medium-perc);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: box-shadow .4s ease-out, color .25s ease-in-out, transform .5s ease-out, filter .5s ease-out;
+    width: clamp(3.125rem, 2.568rem + 2.703vw, 5rem);
+    height: clamp(3.125rem, 2.568rem + 2.703vw, 5rem);
+    filter: blur(0);
+}
+
+.social__content__item a {
+    background-color: var(--base-white);
+}
+
 .social__content__item:nth-child(1) {
+    box-shadow: 0px 0px 10px 1px #1877f2;
     color: #1877f2;
 }
 
 .social__content__item:nth-child(2) {
-    color: #1877f2;
+    box-shadow: 0px 0px 10px 1px var(--secondary);
+    color: var(--secondary);
 }
 
 .social__content__item:nth-child(3) {
+    box-shadow: 0px 0px 10px 1px #25d366;
     color: #25d366;
 }
 
+@media screen and (min-width: 1024px) {
+    .social__content .social__content__item {
+        box-shadow: none;
+    }
 
+    .social__content__item:hover {
+        transform: scale(1.1);
+    }
 
-.icon-gradient {
-    background: linear-gradient(115deg, #f9ce34, #ee2a7b, #6228d7);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    display: block;
-    background-clip: text;
-    padding: var(--radius-xs);
-}
+    .social__content:hover .social__content__item:not(:hover) {
+        transform: scale(0.9);
+        filter: blur(2px);
+    }
 
+    .social__content__item:nth-child(1):hover {
+        box-shadow: 0px 0px 15px 5px #1877f2;
+    }
 
-input,
-textarea {
-    padding: 1rem;
-}
+    .social__content__item:nth-child(2):hover {
+        box-shadow: 0px 0px 15px 5px var(--secondary);
+    }
 
-h2 {
-    font-size: var(--font-size-mega);
+    .social__content__item:nth-child(3):hover {
+        box-shadow: 0px 0px 15px 5px #25d366;
+    }
+
+    .section__contact {
+        flex-wrap: nowrap;
+    }
+
+    .container {
+        flex-wrap: nowrap;
+    }
+
 }
