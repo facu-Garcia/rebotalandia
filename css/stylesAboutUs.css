@@ -258,6 +258,7 @@ h1 {
 h2 {
     width: 100%;
     text-align: center;
+    font-size: var(--font-size-jumbo);
 }
 
 .section__title p {
@@ -280,7 +281,7 @@ h2 {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: var(--padding-md);
+    padding: var(--padding-sm) var(--padding-md);
     border-radius: var(--radius-m);
     width: 100%;
     gap: var(--spacing-ml);
@@ -312,10 +313,17 @@ h2 {
     flex: 1;
 }
 
-.about__text strong {
-    font-size: var(--font-size-lg);
+.about__text h3 {
+    font-size: var(--font-size-xl);
     padding: var(--padding-xs) 0;
     display: block;
+}
+
+.about__text span {
+    display: block;
+    padding: var(--spacing-ml);
+    font-size: var(--font-size-lg);
+    font-weight: 600;
 }
 
 .about__image {

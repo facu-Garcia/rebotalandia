@@ -204,3 +204,13 @@ h1 {
     display: flex;
     flex-wrap: wrap;
 }
+
+.credit__item {
+    width: 100%;
+    max-width: 300px;
+}
+
+.credit__item img {
+    width: 100%;
+}
+
