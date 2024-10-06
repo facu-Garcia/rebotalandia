@@ -278,20 +278,36 @@ h2 {
 .about__item {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: var(--padding-md);
     border-radius: var(--radius-m);
     width: 100%;
     gap: var(--spacing-ml);
+    animation: fadeInUp 1s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0% cover 25%;
 }
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 .about__item:nth-last-child(1) {
     max-width: 100%;
     text-align: center;
 }
 
-.about__text  {
+.about__text {
     min-width: 250px;
     flex: 1;
 }
