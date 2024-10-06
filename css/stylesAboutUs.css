@@ -227,10 +227,6 @@
     --shadow-background: 0 0 10px rgba(0, 0, 0, 0.15);
 }
 
-* {
-    border: 1px solid red;
-}
-
 p {
     font-size: var(--font-size-p);
 }
@@ -312,6 +308,7 @@ h2 {
 }
 
 .about__text {
+    min-width: 200px;
     flex: 1;
 }
 
@@ -349,9 +346,9 @@ h2 {
         padding: var(--padding-sm) var(--padding-md);
     }
 
-    
-.about__image {
-    width: 300px;
-    flex: 0 0 300px;
-}
+
+    .about__image {
+        width: 300px;
+        flex: 0 0 300px;
+    }
 }
