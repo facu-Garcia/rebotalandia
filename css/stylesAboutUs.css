@@ -336,14 +336,9 @@ h2 {
 
 .about__image img {
     width: 100%;
-    max-width: 200px;
+    max-width: 180px;
     object-position: center;
     object-fit: cover;
-    mask-image: url(../images/support/blob/sssplatter-3.svg);
-    mask-size: contain;
-    mask-position: center;
-    mask-repeat: no-repeat;
-    overflow: hidden;
 }
 
 @media screen and (min-width: 480px) {
