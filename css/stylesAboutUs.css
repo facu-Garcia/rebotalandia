@@ -255,6 +255,11 @@ h1 {
     font-size: var(--font-size-giga);
 }
 
+h2 {
+    width: 100%;
+    text-align: center;
+}
+
 .section__title p {
     padding: 1rem;
     width: 100%;
@@ -265,22 +270,30 @@ h1 {
     padding: var(--padding-lg) var(--padding-md);
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    gap: var(--spacing-m);
 }
 
 .about__item {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
     padding: var(--padding-md);
     border-radius: var(--radius-m);
     width: 100%;
-    flex-wrap: wrap;
     gap: var(--spacing-ml);
 }
 
-.about__text p {
-    width: auto;
-    font-size: fon;
+.about__item:nth-last-child(1) {
+    max-width: 100%;
+    text-align: center;
+}
+
+.about__text  {
+    min-width: 250px;
+    flex: 1;
 }
 
 .about__text strong {
@@ -291,16 +304,26 @@ h1 {
 
 .about__image {
     width: 300px;
-    flex: 0 0 300px
+    flex: 0 0 300px;
+    display: flex;
+    justify-content: center;
 }
 
 
 .about__image img {
     width: 100%;
+    max-width: 200px;
+    object-position: center;
+    object-fit: cover;
+    mask-image: url(../images/support/blob/sssplatter-3.svg);
+    mask-size: contain;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    overflow: hidden;
 }
 
-@media screen and (min-width: 480px) { 
+@media screen and (min-width: 480px) {
     .about__item {
-        width: 80%; 
+        width: 80%;
     }
 }
