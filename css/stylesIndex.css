@@ -124,9 +124,10 @@
     width: 200%;
     top: 0;
     border-radius: 50%;
-    background-image: url('../images/support/confeti.png');
+    background-image: url('../images/support/index/confeti.png');
     background-position: center;
-    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 100%;
     background-attachment: fixed;
     transition: 0.8s cubic-bezier(0.68, -0.55, 0.35, 1.00);
 }
@@ -272,7 +273,7 @@
     width: 100%;
     padding: var(--padding-xxl) var(--padding-md);
     text-align: center;
-    background-image: url(../images/support/ballon.png);
+    background-image: url(../images/support/index/ballon.png);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -326,8 +327,7 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: var(--spacing-m);
-    padding: var(--padding-md)
+    padding: var(--padding-sm)
 }
 
 @keyframes appear {
@@ -354,7 +354,7 @@
 
 .container__home li {
     flex: 1;
-    padding: var(--padding-md) 0;
+    padding: var(--padding-sm) 0;
     font-weight: 200;
     border-radius: var(--radius-m);
     text-align: center;
@@ -404,33 +404,21 @@
 
 
 .container__home li .image {
-    height: 300px;
+    width: 100%;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
+    mask-image: url('../images/support/blob/sssplatter-3.svg');
+    -webkit-mask-image: url('../images/support/blob/sssplatter-3.svg');
     mask-size: contain;
     mask-position: center;
     mask-repeat: no-repeat;
     transition: .3s ease-in-out;
 }
 
-.container__home li:nth-child(1) .image {
-    background-image: url('../images/support/option/original/party--1.jpg');
-    mask-image: url('../images/support/blob/sssplatter-3.svg');
-    -webkit-mask-image: url('../images/support/blob/sssplatter-3.svg');
-}
-
-.container__home li:nth-child(2) .image {
-    background-image: url('../images/support/option/original/party--2.jpg');
-    mask-image: url('../images/support/blob/sssplatter-3.svg');
-    -webkit-mask-image: url('../images/support/blob/sssplatter-3.svg');
-}
-
-.container__home li:nth-child(3) .image {
-    background-image: url('../images/support/option/original/party--3.jpg');
-    mask-image: url('../images/support/blob/sssplatter-3.svg');
-    -webkit-mask-image: url('../images/support/blob/sssplatter-3.svg');
+.container__home li .image img {
+    width: 100%;
 }
 
 .container__home p.home__title {
@@ -447,4 +435,17 @@
     animation: appear linear;
     animation-timeline: view();
     animation-range: entry 0% cover 25%;
+}
+
+
+@media screen and (min-width: 480px) {
+
+    .container__home ul {
+        padding: var(--padding-md);
+    }
+
+    .container__home li {
+        padding: var(--padding-md) 0;
+    }
+
 }

@@ -485,7 +485,7 @@ nav .nav__links li {
     background-repeat: repeat-x;
     background-size: cover;
     background-position: center;
-    background-image: url(../images/support/wave.webp);
+    background-image: url(../images/support/waves/wave.webp);
 }
 
 .waves--desktop {

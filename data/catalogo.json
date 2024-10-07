@@ -2,7 +2,7 @@
     {
         "name": "Castillo Gusano Aventura",
         "image": "../images/inflables/castillo-gusano-aventura/castillo-gusano-aventura_000.webp",
-        "hover": "../images/support/hover/castillo-gusano-aventura_00.webp",
+        "hover": "../images/support/hover/castillo-gusano-aventura-hover.webp",
         "description": "<strong>¡Disfruta al máximo con el Castillo Gusano Aventura!</strong> Este inflable ofrece horas de <b>diversión</b> con su mini tobogán integrado y entradas laterales para un acceso fácil. Su diseño <b>cuidadosamente protegido</b> garantiza <b>seguridad</b> y <b>diversión</b> para los niños, creando un entorno ideal para jugar sin límites.",
         "dimensions": {
             "length": "4.50 m",
@@ -29,7 +29,7 @@
     {
         "name": "Mini Slide",
         "image": "../images/inflables/mini-slide/mini-slide_00.webp",
-        "hover": "../images/support/hover/mini-slide_00.webp",
+        "hover": "../images/support/hover/mini-slide-hover.webp",
         "description": "Equipado con una rampa <b>segura</b> para un acceso fácil y emocionante, es ideal para garantizar horas de juego en un entorno <b>seguro</b> y adaptado a los más pequeños. <br> Su tamaño compacto permite una integración perfecta en cualquier espacio, haciendo de cada evento una celebración inolvidable.",
         "dimensions": {
             "length": "3.50 m",
@@ -53,7 +53,7 @@
     {
         "name": "Diversión Arcoíris",
         "image": "../images/inflables/diversion-arcoiris/diversion-arcoiris_00.webp",
-        "hover": "../images/support/hover/diversion-arcoiris_00.webp",
+        "hover": "../images/support/hover/diversion-arcoiris-hover.webp",
         "description": "<strong>¡Diversión garantizada para chicos y grandes con el Diversión Arcoíris!</strong> Este inflable, uno de nuestros favoritos, cuenta con emocionantes resbaladillas y colchones de caída para un juego <b>seguro</b> y divertido. Su vibrante diseño en arcoíris agrega un toque de <b>alegría</b> a cualquier evento, ofreciendo una experiencia inolvidable para todas las edades.",
         "dimensions": {
             "length": "7.00 m",
@@ -79,7 +79,7 @@
     {
         "name": "Rainbow Slide",
         "image": "../images/inflables/rainbow-slide/rainbow-slide_000.webp",
-        "hover": "../images/support/hover/rainbow-slide_00.webp",
+        "hover": "../images/support/hover/rainbow-slide-hover.webp",
         "description": "<strong>¡La diversión alcanza nuevas alturas con el Rainbow Slide!</strong> Este inflable cuenta con escalones que facilitan el ascenso a la emocionante resbaladilla, coronada con un vibrante arcoíris en la parte superior. Extremadamente <b>divertido</b> y visualmente llamativo, el Rainbow Slide promete una experiencia de juego <b>inolvidable</b> para todos.",
         "dimensions": {
             "length": "7.00 m",
@@ -106,7 +106,7 @@
     {
         "name": "Combo Slide",
         "image": "../images/inflables/combo-slide/combo-slide_00.webp",
-        "hover": "../images/support/hover/combo-slide_00.webp",
+        "hover": "../images/support/hover/combo-slide-hover.webp",
         "description": "<strong>¡Aumenta la diversión con el Combo Slide!</strong> Este emocionante inflable combina dos atracciones en uno, ofreciendo una experiencia <b>doble</b> para los más atrevidos de la fiesta. Con una mayor variedad de actividades, el Combo Slide garantiza diversión <b>interminable</b> y aventura para todos los invitados.",
         "dimensions": {
             "length": "14.00 m",
