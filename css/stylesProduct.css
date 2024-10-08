@@ -193,8 +193,8 @@ main {
     justify-content: center;
     align-items: start;
     gap: var(--spacing-xl);
-    padding: var(--padding-md);
     background-color: var(--base-white);
+    padding: var(--padding-md) 0;
 }
 
 .catalog__item {
@@ -323,6 +323,10 @@ h3 {
 @media screen and (min-width: 480px) {
     .container__items {
         padding: var(--padding-xxl) var(--padding-lg);
+    }
+
+    .recommend__products {
+        padding: var(--padding-md);
     }
 }
 
