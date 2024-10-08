@@ -178,7 +178,7 @@ main {
 
 .recommend {
     margin-top: var(--spacing-m);
-    padding: var(--padding-md);
+    padding: var(--padding-md) 0;
     width: 100%;
 }
 
@@ -326,6 +326,11 @@ h3 {
     }
 
     .recommend__products {
+        padding: var(--padding-md);
+    }
+
+
+    .recommend {
         padding: var(--padding-md);
     }
 }
