@@ -15,7 +15,7 @@ main {
     padding: var(--padding-md);
     text-align: left;
     background-color: var(--secondary-800);
-    background-image: url('../images/support/title/catalog.webp');
+    background-image: url('../images/support/title/opacity-catalog.webp');
     background-position: 200%;
     background-size: 80%;
     background-repeat: no-repeat;
@@ -205,6 +205,10 @@ h2 {
 @media screen and (min-width: 768px) {
     h2 {
         min-height: 4rem;
+    }
+
+    .section__title {
+        background-image: url('../images/support/title/catalog.webp');
     }
 }
 
