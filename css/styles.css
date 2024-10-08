@@ -486,6 +486,7 @@ nav .nav__links li {
     background-size: cover;
     background-position: center;
     background-image: url(../images/support/waves/wave.webp);
+    border: 1px solid transparent;
 }
 
 .waves--desktop {

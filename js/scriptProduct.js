@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <h1>${producto.name}</h1>
                         </div>
                         <p class="price">Rentalo por <br> <strong>$${producto.price}</strong></p>
-                        <a class="info__data" href="https://wa.me/525581033464?text=${encodeURIComponent(`Hola, estoy interesado(a) en el inflable ${producto.name}. ¿Podrías darme más detalles sobre la disponibilidad y el proceso de renta? Gracias.`)}" target="_blank">
+                        <a class="info__data" href="https://wa.me/525611788454?text=${encodeURIComponent(`Hola, estoy interesado(a) en el inflable ${producto.name}. ¿Podrías darme más detalles sobre la disponibilidad y el proceso de renta? Gracias.`)}" target="_blank">
                             <i class="fab fa-whatsapp fa-2xl"></i>
                             <p>Pidelo ya!</p>
                         </a>
@@ -74,13 +74,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                     `;
 
-                // Aquí empieza la sección de recomendaciones
                 const recommendContainer = document.querySelector('.recommend__products');
 
-                // Filtrar el catálogo para evitar incluir el producto actual
                 const productosRestantes = data.filter(item => item.link.toLowerCase() !== producto.link.toLowerCase());
 
-                // Seleccionar 3 productos aleatorios
                 const productosAleatorios = [];
                 while (productosAleatorios.length < 3 && productosRestantes.length > 0) {
                     const randomIndex = Math.floor(Math.random() * productosRestantes.length);
@@ -88,7 +85,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     productosAleatorios.push(productoAleatorio);
                 }
 
-                // Insertar los productos aleatorios en el DOM
                 productosAleatorios.forEach(recomendado => {
                     const productoHTML = `
                             <div class="catalog__item">
@@ -100,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 </a>
 
                                 <div class="info__link">
-                                    <a class="info__data" href="https://wa.me/525581033464?text=${encodeURIComponent(`Hola, estoy interesado(a) en el inflable ${recomendado.name}. ¿Podrías darme más detalles sobre la disponibilidad y el proceso de renta? Gracias.`)}" target="_blank">                                     
+                                    <a class="info__data" href="https://wa.me/525611788454?text=${encodeURIComponent(`Hola, estoy interesado(a) en el inflable ${recomendado.name}. ¿Podrías darme más detalles sobre la disponibilidad y el proceso de renta? Gracias.`)}" target="_blank">                                     
                                         <i class="fab fa-whatsapp fa-lg"></i>
                                         <p>Pidelo ya!</p>
                                     </a>
@@ -116,50 +112,44 @@ document.addEventListener('DOMContentLoaded', () => {
                 const modalImage = document.getElementById('modal-image');
                 const closeModalButton = document.getElementById('close-modal');
 
-                // Variable para rastrear el índice de la imagen actual
                 let currentIndex = 0;
 
-                // Cambiar la imagen principal al hacer clic en una miniatura
                 thumbnails.forEach((thumbnail, index) => {
                     thumbnail.addEventListener('click', () => {
                         updateMainImage(index);
                     });
                 });
 
-                // Función para actualizar la imagen principal y la miniatura seleccionada
                 function updateMainImage(index) {
-                    mainImage.src = thumbnails[index].src; // Cambia la imagen principal
-                    currentIndex = index; // Actualiza el índice actual
-                    updateNavButtons(); // Actualiza la visibilidad de los botones
-                    updateThumbnailSelection(); // Actualiza la selección de miniaturas
-                    scrollToThumbnail(index); // Desplaza el carrusel a la miniatura seleccionada
+                    mainImage.src = thumbnails[index].src; 
+                    currentIndex = index; 
+                    updateNavButtons(); 
+                    updateThumbnailSelection();
+                    scrollToThumbnail(index); 
                 }
 
-                // Función para actualizar la visibilidad de los botones de navegación
                 function updateNavButtons() {
                     const prevButton = document.getElementById('prev');
                     const nextButton = document.getElementById('next');
 
                     if (currentIndex === 0) {
-                        prevButton.style.display = 'none'; // Ocultar el botón de "Previo"
+                        prevButton.style.display = 'none';
                     } else {
-                        prevButton.style.display = 'flex'; // Mostrar el botón de "Previo"
+                        prevButton.style.display = 'flex'; 
                     }
 
                     if (currentIndex === thumbnails.length - 1) {
-                        nextButton.style.display = 'none'; // Ocultar el botón de "Siguiente"
+                        nextButton.style.display = 'none'; 
                     } else {
-                        nextButton.style.display = 'flex'; // Mostrar el botón de "Siguiente"
+                        nextButton.style.display = 'flex'; 
                     }
                 }
 
-                // Función para actualizar la selección de miniaturas
                 function updateThumbnailSelection() {
-                    thumbnails.forEach(thumbnail => thumbnail.classList.remove('selected')); // Quitar la clase de selección de todas las miniaturas
-                    thumbnails[currentIndex].classList.add('selected'); // Añadir la clase de selección a la miniatura actual
+                    thumbnails.forEach(thumbnail => thumbnail.classList.remove('selected'));
+                    thumbnails[currentIndex].classList.add('selected'); 
                 }
-
-                // Función para desplazar el carrusel a la miniatura seleccionada
+                
                 function scrollToThumbnail(index) {
                     const thumbnail = thumbnails[index];
                     const thumbnailsContainer = document.querySelector('.gallery__extras');
@@ -172,50 +162,40 @@ document.addEventListener('DOMContentLoaded', () => {
                     });
                 }
 
-                // Inicializar la visibilidad de los botones de navegación
                 updateNavButtons();
                 updateThumbnailSelection();
 
-                // Mostrar el modal al hacer clic en la imagen principal
                 mainImage.addEventListener('click', () => {
                     modal.style.display = 'flex';
-                    modalImage.src = mainImage.src; // Establecer la imagen ampliada
+                    modalImage.src = mainImage.src; 
                 });
 
-                // Cerrar el modal al hacer clic en la X o fuera de la imagen
                 closeModalButton.addEventListener('click', () => {
                     modal.style.display = 'none';
-                    modalImage.style.transform = 'scale(1)'; // Restablecer zoom al cerrar
+                    modalImage.style.transform = 'scale(1)'; 
                 });
 
                 modal.addEventListener('click', () => {
                     modal.style.display = 'none';
-                    modalImage.style.transform = 'scale(1)'; // Restablecer zoom al cerrar
+                    modalImage.style.transform = 'scale(1)';
                 });
 
                 // Zoom en la imagen del modal al hacer clic
                 modalImage.addEventListener('click', (e) => {
-                    if (modalImage.style.transform === 'scale(2)') {
-                        modalImage.style.transform = 'scale(1)'; // Reducir
-                    } else {
-                        modalImage.style.transform = 'scale(2)'; // Ampliar
-                    }
-                    e.stopPropagation(); // Evita que se cierre el modal al hacer clic en la imagen
+                    e.stopPropagation(); 
                 });
 
-                // Navegar a la imagen anterior
                 document.getElementById('prev').addEventListener('click', () => {
                     if (currentIndex > 0) {
-                        currentIndex--; // Decrementa el índice
-                        updateMainImage(currentIndex); // Actualiza la imagen principal y la selección
+                        currentIndex--; 
+                        updateMainImage(currentIndex);
                     }
                 });
 
-                // Navegar a la imagen siguiente
                 document.getElementById('next').addEventListener('click', () => {
                     if (currentIndex < thumbnails.length - 1) {
-                        currentIndex++; // Incrementa el índice
-                        updateMainImage(currentIndex); // Actualiza la imagen principal y la selección
+                        currentIndex++; 
+                        updateMainImage(currentIndex);
                     }
                 });
 
