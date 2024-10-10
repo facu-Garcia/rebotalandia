@@ -2,11 +2,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const nombreInput = document.getElementById('nombre');
     const precioSelect = document.getElementById('precio');
 
-    // Agregar eventos para los filtros
     nombreInput.addEventListener('input', filtrarCatalogo);
     precioSelect.addEventListener('change', filtrarCatalogo);
 
-    // Cargar el catálogo al inicio
     fetch('../data/catalogo.json')
         .then(response => response.json())
         .then(data => {

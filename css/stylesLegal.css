@@ -208,14 +208,14 @@ h1 {
     font-size: var(--font-size-giga);
     padding: var(--padding-md) 0;
     text-align: center;
+    width: 100%;
 }
 
 .section__credits {
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: start;
+    max-width: 1024px;
+    flex-direction: column;
     padding: var(--padding-md);
     gap: var(--spacing-m);
 }
@@ -242,13 +242,24 @@ h1 {
     gap: var(--spacing-m);
 }
 
-.section__legal ul li {
+.section__legal ul li,
+.section__credits ul li {
     list-style: disc;
     margin-left: 20px;
+}
+
+.section__credits p {
+    text-align: left;
+}
+
+.section__credits ul li {
+    padding: var(--padding-md) 0;
+}
+
+.section__credits ul li a:hover {
+    text-decoration: underline;
 }
 
 .section__legal a {
     text-decoration: underline;
 }
-
-

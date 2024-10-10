@@ -180,7 +180,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     modalImage.style.transform = 'scale(1)';
                 });
 
-                // Zoom en la imagen del modal al hacer clic
                 modalImage.addEventListener('click', (e) => {
                     e.stopPropagation(); 
                 });
