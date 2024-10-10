@@ -14,7 +14,7 @@ main {
     padding: var(--padding-md);
     text-align: left;
     background-color: var(--orange);
-    background-image: url('../images/support/title/opacity-aboutUs.webp');
+    background-image: url('../images/support/title/opacity-contactUs.webp');
     background-position: 300% 70%;
     background-size: 90%;
     background-repeat: no-repeat;
@@ -155,7 +155,7 @@ textarea {
 
 @media screen and (min-width: 768px) {
     .section__title {
-        background-image: url('../images/support/title/aboutUs.webp');
+        background-image: url('../images/support/title/opacity-contactUs.webp');
     }
 }
 
