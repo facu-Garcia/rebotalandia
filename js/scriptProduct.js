@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     fetch('../../data/catalogo.json')
         .then(response => response.json())
         .then(data => {
-            const producto = data.find(item => item.name.toLowerCase().includes(pageTitle));
+            const producto = data.find(item => item.title.toLowerCase().includes(pageTitle));
 
             if (producto) {
                 document.title = producto.name;
