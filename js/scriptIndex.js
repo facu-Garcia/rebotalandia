@@ -1,10 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // CARRUSEL
     const items = document.querySelectorAll('.carousel__item');
     const carouselContainer = document.getElementById('carousel-container');
     const prevButton = document.getElementById('prev');
     const nextButton = document.getElementById('next');
     let current = 0;
+    let isThrottled = false;
+    const delayTime = 800;
 
     const gradients = {
         'rainbow-slide': 'linear-gradient(45deg, var(--primary-600), var(--primary-800))',
@@ -32,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         newBackground.style.transition = 'opacity 0.8s ease-in-out';
         carouselContainer.appendChild(newBackground);
 
-        window.getComputedStyle(newBackground).opacity; 
+        window.getComputedStyle(newBackground).opacity;
         newBackground.style.opacity = '1';
 
         setTimeout(() => {
@@ -67,29 +68,50 @@ document.addEventListener('DOMContentLoaded', () => {
 
     updateCarousel();
 
+    const throttle = (callback) => {
+        if (isThrottled) return;
+
+        isThrottled = true;
+        callback();
+
+        setTimeout(() => {
+            isThrottled = false;
+        }, delayTime);
+    };
+
     nextButton.addEventListener('click', () => {
-        current = (current + 1) % items.length;
-        updateCarousel();
+        throttle(() => {
+            current = (current + 1) % items.length;
+            updateCarousel();
+        });
     });
 
     prevButton.addEventListener('click', () => {
-        current = (current - 1 + items.length) % items.length;
-        updateCarousel();
+        throttle(() => {
+            current = (current - 1 + items.length) % items.length;
+            updateCarousel();
+        });
     });
 
     let touchstartX = 0;
     let touchendX = 0;
 
     const handleSwipe = () => {
+        if (isThrottled) return;
+
         if (touchendX < touchstartX) {
-            current = (current + 1) % items.length;
-            updateCarousel();
+            throttle(() => {
+                current = (current + 1) % items.length;
+                updateCarousel();
+            });
         }
         if (touchendX > touchstartX) {
-            current = (current - 1 + items.length) % items.length;
-            updateCarousel();
+            throttle(() => {
+                current = (current - 1 + items.length) % items.length;
+                updateCarousel();
+            });
         }
-    }
+    };
 
     carouselContainer.addEventListener('touchstart', (e) => {
         touchstartX = e.changedTouches[0].screenX;
