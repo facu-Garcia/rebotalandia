@@ -42,11 +42,12 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }, 800);
     };
-    
+
     const updateButtonBackground = (newColor) => {
         prevButton.style.backgroundColor = newColor;
         nextButton.style.backgroundColor = newColor;
     };
+
     const updateBackgroundColor = () => {
         const activeItem = items[current];
         const className = Array.from(activeItem.classList).find(cls => gradients[cls]);
@@ -74,5 +75,28 @@ document.addEventListener('DOMContentLoaded', () => {
     prevButton.addEventListener('click', () => {
         current = (current - 1 + items.length) % items.length;
         updateCarousel();
+    });
+
+    let touchstartX = 0;
+    let touchendX = 0;
+
+    const handleSwipe = () => {
+        if (touchendX < touchstartX) {
+            current = (current + 1) % items.length;
+            updateCarousel();
+        }
+        if (touchendX > touchstartX) {
+            current = (current - 1 + items.length) % items.length;
+            updateCarousel();
+        }
+    }
+
+    carouselContainer.addEventListener('touchstart', (e) => {
+        touchstartX = e.changedTouches[0].screenX;
+    });
+
+    carouselContainer.addEventListener('touchend', (e) => {
+        touchendX = e.changedTouches[0].screenX;
+        handleSwipe();
     });
 });
