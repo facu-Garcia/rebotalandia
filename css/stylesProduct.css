@@ -104,7 +104,6 @@ main {
     justify-content: center;
     align-items: center;
     z-index: 1000;
-    /* Por encima de otros elementos */
 }
 
 .modal-image {
@@ -157,6 +156,16 @@ main {
     background-color: var(--secondary-600);
     color: var(--base-white);
     border-radius: var(--radius-full-round-perc);
+}
+
+.item__content .price {
+    font-size: var(--font-size-md);
+    color: var(--base-black);
+    font-family: var(--font-family-primary);
+}
+
+.item__content .price strong {
+    font-size: var(--font-size-xl);
 }
 
 .price {
@@ -312,7 +321,7 @@ h3 {
 
 @media screen and (min-width: 375px) {
     .catalog__item {
-        width: 250px;
+        width: 300px;
     }
 
     .item__content .image {
@@ -334,7 +343,6 @@ h3 {
         padding: var(--padding-md);
     }
 }
-
 
 @media screen and (min-width: 768px) {
 

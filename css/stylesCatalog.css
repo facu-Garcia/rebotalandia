@@ -113,7 +113,7 @@ h2 {
     padding: 1rem;
     padding-bottom: 2rem;
     text-align: center;
-    font-size: var(--font-size-md);
+    font-size: var(--font-size-md); 
     font-weight: lighter;
 }
 
@@ -201,6 +201,8 @@ h2 {
         padding: var(--padding-xxl) var(--padding-xl);
     }
 }
+
+
 
 @media screen and (min-width: 768px) {
     h2 {

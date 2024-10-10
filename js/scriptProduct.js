@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 <a class="item__content" href="${recomendado.link}">
                                     <div class="image" style="background: url(../${recomendado.image}) no-repeat center center / contain"></div>
                                     <h3>${recomendado.name}</h3>
-                                    <p><b>${recomendado.price}</b></p>
+                                    <p class="price">Rentalo por <br> <strong>$${recomendado.price}</strong></p>
                                 </a>
 
                                 <div class="info__link">
@@ -121,11 +121,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
 
                 function updateMainImage(index) {
-                    mainImage.src = thumbnails[index].src; 
-                    currentIndex = index; 
-                    updateNavButtons(); 
+                    mainImage.src = thumbnails[index].src;
+                    currentIndex = index;
+                    updateNavButtons();
                     updateThumbnailSelection();
-                    scrollToThumbnail(index); 
+                    scrollToThumbnail(index);
                 }
 
                 function updateNavButtons() {
@@ -135,21 +135,21 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (currentIndex === 0) {
                         prevButton.style.display = 'none';
                     } else {
-                        prevButton.style.display = 'flex'; 
+                        prevButton.style.display = 'flex';
                     }
 
                     if (currentIndex === thumbnails.length - 1) {
-                        nextButton.style.display = 'none'; 
+                        nextButton.style.display = 'none';
                     } else {
-                        nextButton.style.display = 'flex'; 
+                        nextButton.style.display = 'flex';
                     }
                 }
 
                 function updateThumbnailSelection() {
                     thumbnails.forEach(thumbnail => thumbnail.classList.remove('selected'));
-                    thumbnails[currentIndex].classList.add('selected'); 
+                    thumbnails[currentIndex].classList.add('selected');
                 }
-                
+
                 function scrollToThumbnail(index) {
                     const thumbnail = thumbnails[index];
                     const thumbnailsContainer = document.querySelector('.gallery__extras');
@@ -167,12 +167,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 mainImage.addEventListener('click', () => {
                     modal.style.display = 'flex';
-                    modalImage.src = mainImage.src; 
+                    modalImage.src = mainImage.src;
                 });
 
                 closeModalButton.addEventListener('click', () => {
                     modal.style.display = 'none';
-                    modalImage.style.transform = 'scale(1)'; 
+                    modalImage.style.transform = 'scale(1)';
                 });
 
                 modal.addEventListener('click', () => {
@@ -181,19 +181,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
 
                 modalImage.addEventListener('click', (e) => {
-                    e.stopPropagation(); 
+                    e.stopPropagation();
                 });
 
                 document.getElementById('prev').addEventListener('click', () => {
                     if (currentIndex > 0) {
-                        currentIndex--; 
+                        currentIndex--;
                         updateMainImage(currentIndex);
                     }
                 });
 
                 document.getElementById('next').addEventListener('click', () => {
                     if (currentIndex < thumbnails.length - 1) {
-                        currentIndex++; 
+                        currentIndex++;
                         updateMainImage(currentIndex);
                     }
                 });
